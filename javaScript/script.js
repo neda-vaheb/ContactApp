@@ -65,6 +65,30 @@ const showError = (text, index) => {
           ? (errorContainer[5].innerText = "")
           : showError("To submit this form,Please consent to beaning contacted", 5);
       };
+
+      const toShowSuccessMessage = ()=>{
+        errorContainer.forEach((error) => {
+            if(error.innerText) {
+                isAccept= false;
+                return isAccept;
+            }else{
+                return isAccept=true;
+            }
+                
+          });
+          if(isAccept){
+            
+            successMassage.style.display = "block";
+            setTimeout(()=>{
+                successMassage.style.display = "none";
+                inputs.forEach(input=>{
+                    input.value ="";
+                    message.value ="";
+                    form.reset();
+                })
+            },3000)
+        }
+      }
       
 
 const buttonHandler = (event) => {
@@ -74,27 +98,7 @@ const buttonHandler = (event) => {
     checkQueryField();
     messageStatus();
     checkBoxStatus();
-    errorContainer.forEach((error) => {
-        if(error.innerText) {
-            isAccept= false;
-            return isAccept;
-        }else{
-            return isAccept=true;
-        }
-            
-      });
-      if(isAccept){
-        
-        successMassage.style.display = "block";
-        setTimeout(()=>{
-            successMassage.style.display = "none";
-            inputs.forEach(input=>{
-                input.value ="";
-                message.value ="";
-                form.reset();
-            })
-        },3000)
-    }
+    toShowSuccessMessage();
 };
 
 
