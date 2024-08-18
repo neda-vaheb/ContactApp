@@ -5,6 +5,7 @@ const errorContainer = document.querySelectorAll("span");
 const email = document.getElementById("email");
 const queryItems = document.getElementsByName("query");
 const message = document.getElementById("message");
+const checkBox = document.getElementById("checkbox");
 
 const showError = (text, index) => {
     errorContainer[index].innerText = text;
@@ -56,6 +57,13 @@ const showError = (text, index) => {
           errorContainer[4].innerText = "";
         }
       };
+      const checkBoxStatus = () => {
+        const isCheck = checkBox.checked;
+        isCheck
+          ? (errorContainer[5].innerText = "")
+          : showError("To submit this form,Please consent to beaning contacted", 5);
+      };
+      
 
 const buttonHandler = (event) => {
     event.preventDefault();
@@ -63,6 +71,7 @@ const buttonHandler = (event) => {
     emailValidation();
     checkQueryField();
     messageStatus();
+    checkBoxStatus();
 };
 
 
