@@ -1,0 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+@font-face {
+  font-family: "Karla";
+  src: url(../assets/fonts/webfonts/Karla-Regular.woff2) format("woff2");
+  src: url(../assets/fonts/ttf/Karla-Regular.ttf) format("ttf");
+  src: url(../assets/fonts/variable/Karla[wght].ttf) format("ttf");
+  font-weight: 400;
+}
