@@ -1,21 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="./assets/images/favicon-32x32.png"
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="stylesheet" href="./styles/style.css" />
-    
-        <title>Contact form</title>
-      </head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <title>Contact form</title>
+  </head>
+  <body>
+    <main>
+
+      <form>
+        <h2>Contact Us</h2>
+
+        <div class="name-identity">
+          <div id="first-name">
+            <label class="requir">First Name</label>
+            <input type="text" required />
+            <span class="error"></span>
+          </div>
+
+          <div id="last-name">
+            <label class="requir">Last Name</label>
+            <input type="text" required />
+            <span class="error"></span>
+          </div>
+        </div>
+
+        <div class="email-identity flex-column">
+          <label class="requir">Email</label>
+          <input type="email" id="email" required />
+          <span class="error"></span>
+        </div>
+
+        <div class="query-container flex-column">
+          <label class="requir">Query Type</label>
+          <div>
+            <div class="query-item general">
+              <input type="radio" name="query" value="" />
+              <label for="General Enquiry"> General Enquiry</label>
+            </div>
+            <div class="query-item">
+              <input type="radio" name="query" value="" />
+              <label for="Support-Request"> Support Request</label>
+            </div>
+          </div>
+          <span class="error"></span>
+        </div>
+
+        <div class="message-container flex-column">
+          <label class="requir">Message</label>
+          <textarea rows="50" cols="100" id="message" required></textarea>
+          <span class="error"></span>
+        </div>
+
+        <div id="check">
+          <input type="checkbox" id="checkbox" value="" />
+          <label for="check"> I consent to being contacted by the team</label>
+        </div>
+        <span style="margin-bottom: 10px" class="error"></span>
+
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+    <script src="./javaScript/script.js"></script>
+  </body>
 </html>
