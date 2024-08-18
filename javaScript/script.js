@@ -103,4 +103,6 @@ const buttonHandler = (event) => {
 
 
 button.addEventListener("click", buttonHandler);
-
+form.addEventListener("mousedown",(event)=>{
+    event.preventDefault();
+})
