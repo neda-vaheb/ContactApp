@@ -4,6 +4,7 @@ const button = document.querySelector("button");
 const errorContainer = document.querySelectorAll("span");
 const email = document.getElementById("email");
 const queryItems = document.getElementsByName("query");
+const message = document.getElementById("message");
 
 const showError = (text, index) => {
     errorContainer[index].innerText = text;
@@ -45,11 +46,23 @@ const showError = (text, index) => {
           : showError("A required field has been missed", 3);
       };
 
+      const messageStatus = () => {
+        const messageValue = message.value.trim();
+        if (!messageValue) {
+          showError("A required field has been missed", 4);
+          message.className = "inputError";
+        } else {
+          message.classList.remove("inputError");
+          errorContainer[4].innerText = "";
+        }
+      };
+
 const buttonHandler = (event) => {
     event.preventDefault();
     checkField();
     emailValidation();
     checkQueryField();
+    messageStatus();
 };
 
 
