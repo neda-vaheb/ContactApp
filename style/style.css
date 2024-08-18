@@ -161,3 +161,11 @@
   button:hover {
     background-color: var(--color-grayDarker);
   }
+  .inputError {
+    border: 1px solid var(--color-red) !important;
+  }
+  .error {
+    display: none;
+    color: var(--color-red);
+  }
+  
