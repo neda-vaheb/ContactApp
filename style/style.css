@@ -6,3 +6,158 @@
   src: url(../assets/fonts/variable/Karla[wght].ttf) format("ttf");
   font-weight: 400;
 }
+
+:root {
+    --color-primeryLighter: hsl(148, 38%, 91%);
+    --color-primeryMedium: hsl(169, 82%, 27%);
+    --color-red: hsl(0, 66%, 54%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-grayMedium: hsl(186, 15%, 59%);
+    --color-grayDarker: hsl(187, 24%, 22%);
+  }
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Karla", sans-serif;
+    background-color: var(--color-primeryLighter);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  form {
+    text-align: left;
+    width: 700px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    justify-content: space-between;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px var(--color-grayMedium);
+    background-color: var(--color-white);
+  }
+  h2 {
+    color: var(--color-grayDarker);
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .name-identity {
+    display: flex;
+    justify-content: space-between;
+  }
+  .name-identity > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 40px;
+  }
+  .requir::after {
+    content: "*";
+    color: var(--color-grayMedium);
+    margin-left: 4px;
+  }
+  #first-name {
+    margin-right: 30px;
+  }
+  #last-name {
+    margin-left: 30px;
+  }
+  #last-name input,
+  #first-name input,
+  .email-identity input,
+  .query-item {
+    padding: 12px 8px;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid var(--color-grayMedium);
+    cursor: pointer;
+    box-shadow: 3px 3px 3px var(--color-primeryLighter);
+  }
+  #last-name input:hover,
+  #first-name input:hover,
+  .email-identity input:hover,
+  .query-item:hover ,.message-container textarea:hover {
+  border: 1px solid var(--color-grayDarker);
+  }
+  #first-name input:focus,
+  #last-name input:focus,
+  .email-identity input:focus,
+  .message-container textarea:focus {
+    outline: none;
+    border: 1px solid var(--color-primeryMedium);
+  }
+  .query-container > div {
+    display: flex;
+    justify-content: space-between;
+  }
+  .query-item {
+    width: 100%;
+  }
+  .query-item input {
+    accent-color: var(--color-primeryMedium);
+  }
+  .query-item-check {
+    background-color: var(--color-primeryLighter);
+    border: 1px solid var(--color-primeryMedium);
+  }
+  .general {
+    margin-right: 20px;
+  }
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .message-container {
+    margin-top: 20px;
+  }
+  
+  label {
+    color: var(--color-grayDarker);
+  }
+  .message-container textarea {
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    padding: 20px;
+    outline: none;
+    border: 1px solid var(--color-grayMedium);
+  }
+  
+  #check {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px 0;
+    line-height: 1rem;
+  }
+  #check input {
+    accent-color: var(--color-primeryMedium);
+  }
+  #check label {
+    margin-left: 8px;
+  }
+  button {
+    border: none;
+    background-color: var(--color-primeryMedium);
+    color: var(--color-white);
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    box-shadow: 3px 3px 3px var(--color-primeryLighter);
+  }
+  button:hover {
+    background-color: var(--color-grayDarker);
+  }
