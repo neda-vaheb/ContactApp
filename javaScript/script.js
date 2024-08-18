@@ -6,6 +6,8 @@ const email = document.getElementById("email");
 const queryItems = document.getElementsByName("query");
 const message = document.getElementById("message");
 const checkBox = document.getElementById("checkbox");
+const successMassage = document.getElementById("successMassage");
+ let isAccept = false; 
 
 const showError = (text, index) => {
     errorContainer[index].innerText = text;
@@ -72,6 +74,27 @@ const buttonHandler = (event) => {
     checkQueryField();
     messageStatus();
     checkBoxStatus();
+    errorContainer.forEach((error) => {
+        if(error.innerText) {
+            isAccept= false;
+            return isAccept;
+        }else{
+            return isAccept=true;
+        }
+            
+      });
+      if(isAccept){
+        
+        successMassage.style.display = "block";
+        setTimeout(()=>{
+            successMassage.style.display = "none";
+            inputs.forEach(input=>{
+                input.value ="";
+                message.value ="";
+                form.reset();
+            })
+        },3000)
+    }
 };
 
 

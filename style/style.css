@@ -168,4 +168,31 @@
     display: none;
     color: var(--color-red);
   }
+  #successMassage{
+    position: absolute;
+    background-color: var(--color-primeryMedium);
+    color: var(--color-white);
+    text-align: left;
+    padding: 15px 20px;
+    border-radius: 10px;
+    line-height: 2rem;
+    top :10px;
+    left: 40%;
+    display: none;
+    margin: auto;
+  
+  }
+  #successMassage h5 img {
+    width: 17px;
+    height: 17px;
+    margin-right: 7px;
+  }
+  #successMassage h5 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #successMassage p{
+    font-size: 11px;
+  }
   
