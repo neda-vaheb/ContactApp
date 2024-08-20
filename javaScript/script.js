@@ -100,7 +100,7 @@ const buttonHandler = (event) => {
 
 button.addEventListener("click", buttonHandler);
 inputs.forEach(input=>{
-    input.addEventListener("onpaste", (event) => {
+    input.addEventListener("contextmenu", (event) => {
         event.preventDefault();
       });
 })
