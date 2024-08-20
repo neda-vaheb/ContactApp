@@ -231,7 +231,7 @@ button:hover {
 @media (max-width: 530px) {
   form {
     flex-wrap: wrap;
-    width: 300px;
+    width: 280px;
     height: auto;
     padding: 30px;
   }

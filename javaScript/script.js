@@ -99,6 +99,8 @@ const buttonHandler = (event) => {
 };
 
 button.addEventListener("click", buttonHandler);
-form.addEventListener("mousedown", (event) => {
-  event.preventDefault();
-});
+inputs.forEach(input=>{
+    input.addEventListener("onpaste", (event) => {
+        event.preventDefault();
+      });
+})
